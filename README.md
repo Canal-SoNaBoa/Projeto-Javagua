@@ -56,9 +56,9 @@ Clean Code e SOLID
 
 Validação de dados e tratamento de exceções
 
- ==========================
- CONFIGURAÇÃO DO BANCO H2
- ==========================
+ 
+ *** CONFIGURAÇÃO DO BANCO H2
+
 
  Define a URL do banco H2 em memória (será apagado ao desligar a aplicação)
 spring.datasource.url=jdbc:h2:mem:testdb
