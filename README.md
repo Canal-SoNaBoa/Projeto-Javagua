@@ -56,7 +56,6 @@ Clean Code e SOLID
 
 Validação de dados e tratamento de exceções
 
-## 
 # ==========================
 # CONFIGURAÇÃO DO BANCO H2
 # ==========================
@@ -82,7 +81,7 @@ spring.h2.console.path=/h2-console
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=update
 
-## 
+
 
 
 
