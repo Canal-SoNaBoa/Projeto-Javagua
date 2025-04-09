@@ -26,3 +26,6 @@ spring.h2.console.path=/h2-console
 # Configuração do Hibernate (JPA)
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=update
+
+#Acessar:
+# localhost:8080/h2-console
