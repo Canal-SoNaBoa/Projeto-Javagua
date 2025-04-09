@@ -100,16 +100,8 @@ DELETE http://localhost:8080/fornecedores/1
 
 - O projeto está preparado para uso com banco **H2 em memória**.
 - Pode ser facilmente adaptado para MySQL, PostgreSQL ou outro banco relacional.
-- Segue boas práticas com separação de responsabilidades e padronização de código.
 
 ---
-
-Se quiser, posso complementar esse `README` com exemplos de JSON para request/response ou explicar como testar cada rota com o Postman. Quer incluir isso também? 😊
-
-
-
-
-
 
 
 
