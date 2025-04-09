@@ -1,3 +1,114 @@
+# 🧾 Fluxo de Fornecedor - Projeto Spring Boot
+
+Este projeto implementa o fluxo de cadastro de **Fornecedores** seguindo o padrão arquitetural **MVC (Model-View-Controller)**. Toda a estrutura foi pensada para manter o código limpo, organizado e de fácil manutenção.
+
+---
+
+## 🧱 Estrutura do Projeto
+
+Abaixo estão os principais componentes utilizados no fluxo de Fornecedor:
+
+### 📦 FornecedorModel
+
+Classe responsável por representar a entidade **Fornecedor**. Contém os atributos essenciais do modelo e pode incluir anotações JPA para mapeamento com o banco de dados.
+
+---
+
+### 💾 FornecedorRepository
+
+Interface que estende `JpaRepository`, permitindo realizar operações com o banco de dados de forma simples e eficiente.
+
+---
+
+### 🎮 FornecedorController
+
+Classe responsável por receber as requisições HTTP e direcioná-las para a camada de serviço ou repositório. Nela, o CRUD completo foi implementado com os seguintes métodos:
+
+---
+
+## ✨ Funcionalidades do Controller
+
+- **`cadastrarFornecedor`**  (`POST /fornecedores`)
+  Endpoint que recebe os dados de um novo fornecedor e realiza o cadastro no sistema.
+
+```json
+{
+  "nome": "Fornecedor Exemplo",
+  "cnpj": "12.345.678/0001-99",
+  "email": "fornecedor@exemplo.com",
+  "telefone": "11999999999"
+}
+
+
+
+- **`listarFornecedores`**   (GET /fornecedores)
+  Retorna uma lista com todos os fornecedores cadastrados.
+
+[
+  {
+    "id": 1,
+    "nome": "Fornecedor Exemplo",
+    "cnpj": "12.345.678/0001-99",
+    "email": "fornecedor@exemplo.com",
+    "telefone": "11999999999"
+  },
+  {
+    "id": 2,
+    "nome": "Outro Fornecedor",
+    "cnpj": "98.765.432/0001-00",
+    "email": "outro@fornecedor.com",
+    "telefone": "11888888888"
+  }
+]
+
+- **`editarFornecedor`**  (PUT /fornecedores/{id})
+  Permite atualizar as informações de um fornecedor existente.
+
+{
+  "nome": "Fornecedor Atualizado",
+  "cnpj": "12.345.678/0001-99",
+  "email": "atualizado@fornecedor.com",
+  "telefone": "11777777777"
+}
+
+
+
+
+- **`deletarFornecedor`**  (DELETE /fornecedores/{id})
+  Remove um fornecedor do sistema com base no ID informado.
+DELETE http://localhost:8080/fornecedores/1
+
+
+---
+
+## 🗂️ Exemplo de Endpoints
+
+| Método HTTP | Rota                         | Ação                  |
+|-------------|------------------------------|------------------------|
+| POST        | `/fornecedores`              | Cadastrar fornecedor   |
+| GET         | `/fornecedores`              | Listar fornecedores    |
+| PUT         | `/fornecedores/{id}`         | Editar fornecedor      |
+| DELETE      | `/fornecedores/{id}`         | Deletar fornecedor     |
+
+---
+
+## 📌 Observações
+
+- O projeto está preparado para uso com banco **H2 em memória**.
+- Pode ser facilmente adaptado para MySQL, PostgreSQL ou outro banco relacional.
+- Segue boas práticas com separação de responsabilidades e padronização de código.
+
+---
+
+Se quiser, posso complementar esse `README` com exemplos de JSON para request/response ou explicar como testar cada rota com o Postman. Quer incluir isso também? 😊
+
+
+
+
+
+
+
+
 ## ⚙️ Configuração do Banco H2
 
 Abaixo estão as configurações utilizadas no `application.properties` para ativar e acessar o banco de dados H2:
