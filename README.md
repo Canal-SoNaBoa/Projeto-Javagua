@@ -31,13 +31,14 @@ Classe responsável por receber as requisições HTTP e direcioná-las para a ca
 - **`cadastrarFornecedor`**  
   Endpoint que recebe os dados de um novo fornecedor e realiza o cadastro no sistema.
   (`POST /fornecedores`)
+
   ```json
-{
-  "nome": "Fornecedor Exemplo",
-  "cnpj": "12.345.678/0001-99",
-  "email": "fornecedor@exemplo.com",
-  "telefone": "11999999999"
-}`
+  {
+    "nome": "Fornecedor Exemplo",
+    "cnpj": "12.345.678/0001-99",
+    "email": "fornecedor@exemplo.com",
+    "telefone": "11999999999"
+  }
 
 
 
