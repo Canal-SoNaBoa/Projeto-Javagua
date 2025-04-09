@@ -1,4 +1,4 @@
-# 🧾 Fluxo de Fornecedor - Projeto Spring Boot
+# 🧾 Fluxo de Fornecedor - Projeto Javagua
 
 Implementa o fluxo de cadastro de **Fornecedores** seguindo o padrão arquitetural **MVC (Model-View-Controller)**.
 
