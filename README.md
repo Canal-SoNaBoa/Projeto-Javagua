@@ -1,6 +1,6 @@
 # 🧾 Fluxo de Fornecedor - Projeto Spring Boot
 
-Este projeto implementa o fluxo de cadastro de **Fornecedores** seguindo o padrão arquitetural **MVC (Model-View-Controller)**. Toda a estrutura foi pensada para manter o código limpo, organizado e de fácil manutenção.
+Implementa o fluxo de cadastro de **Fornecedores** seguindo o padrão arquitetural **MVC (Model-View-Controller)**.
 
 ---
 
