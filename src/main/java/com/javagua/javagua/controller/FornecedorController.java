@@ -15,12 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.javagua.javagua.model.FornecedorModel;
 import com.javagua.javagua.repository.FornecedorRepository;
 
-@RestController // // @RestController = Indica que essa classe é um controller REST, ou seja, que responderá a requisições HTTP (ex: GET, POST)
-@RequestMapping("/fornecedores") // @RequestMapping = Define o caminho base para as rotas dessa controller 
-//                                  [ http://localhost:8080/fornecedores ]
+@RestController // // @RestController = Indica que essa classe é um controller REST, ou seja,
+                // que responderá a requisições HTTP (ex: GET, POST)
+@RequestMapping("/fornecedores") // @RequestMapping = Define o caminho base para as rotas dessa controller
+// [ http://localhost:8080/fornecedores ]
 public class FornecedorController {
-    
-    // Injeção de dependência: estamos dizendo para o Spring criar uma instância do repository
+
+    // Injeção de dependência: estamos dizendo para o Spring criar uma instância do
+    // repository
     // e entregar aqui automaticamente (sem precisar instanciar com "new")
     private final FornecedorRepository fornecedorRepository;
 
@@ -29,10 +31,17 @@ public class FornecedorController {
         this.fornecedorRepository = fornecedorRepository;
     }
 
+    // Teste inicial de controller
+    // Endpoint: http://localhost:8080/fornecedores/teste
+    @GetMapping
+    public String testarAcesso() {
+        return "Acesso FornecedorController - Ok ";
+    }
 
     // Método POST = Usado para cadastrar um novo fornecedor
-    // @RequestBody = Diz ao Spring para pegar o JSON que vem na requisição e transformar em um FornecedorModel
-    @PostMapping(value = "/cadastrar")    
+    // @RequestBody = Diz ao Spring para pegar o JSON que vem na requisição e
+    // transformar em um FornecedorModel
+    @PostMapping(value = "/cadastrar")
     public FornecedorModel cadastrarFornecedor(@RequestBody FornecedorModel fornecedor) {
         return fornecedorRepository.save(fornecedor); // Salva o fornecedor no banco e retorna o que foi salvo
         // http://localhost:8080/fornecedores/cadastrar
@@ -44,7 +53,6 @@ public class FornecedorController {
         return fornecedorRepository.findAll(); // Busca todos os fornecedores no banco de dados
         // http://localhost:8080/fornecedores/listar
     }
-
 
     // Método PUT = Edita um fornecedor existente
     // @PathVariable = Captura o {id} da URL
@@ -76,12 +84,11 @@ public class FornecedorController {
 
 }
 
-
-
-
-
 // Dica DevSoNaBoa :
 
-// "Aqui a gente usa injeção de dependência via construtor. Isso melhora a testabilidade,
-//  evita problemas com reflexão e ajuda a manter o código mais limpo e seguro, principalmente
-//  em sistemas maiores. Mas em projetos menores, pode usar @Autowired no campo que também vai funcionar."
+// "Aqui a gente usa injeção de dependência via construtor. Isso melhora a
+// testabilidade,
+// evita problemas com reflexão e ajuda a manter o código mais limpo e seguro,
+// principalmente
+// em sistemas maiores. Mas em projetos menores, pode usar @Autowired no campo
+// que também vai funcionar."
