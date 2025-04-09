@@ -32,46 +32,16 @@ Classe responsável por receber as requisições HTTP e direcioná-las para a ca
   Endpoint que recebe os dados de um novo fornecedor e realiza o cadastro no sistema.
   (`POST /fornecedores`)
 
-```json
-{
-  "nome": "Fornecedor Exemplo",
-  "cnpj": "12.345.678/0001-99",
-  "email": "fornecedor@exemplo.com",
-  "telefone": "11999999999"
-}
 
 
 
 - **`listarFornecedores`**   (GET /fornecedores)
   Retorna uma lista com todos os fornecedores cadastrados.
 
-[
-  {
-    "id": 1,
-    "nome": "Fornecedor Exemplo",
-    "cnpj": "12.345.678/0001-99",
-    "email": "fornecedor@exemplo.com",
-    "telefone": "11999999999"
-  },
-  {
-    "id": 2,
-    "nome": "Outro Fornecedor",
-    "cnpj": "98.765.432/0001-00",
-    "email": "outro@fornecedor.com",
-    "telefone": "11888888888"
-  }
-]
 
 - **`editarFornecedor`**  
   Permite atualizar as informações de um fornecedor existente.
 (PUT /fornecedores/{id})
-
-{
-  "nome": "Fornecedor Atualizado",
-  "cnpj": "12.345.678/0001-99",
-  "email": "atualizado@fornecedor.com",
-  "telefone": "11777777777"
-}
 
 
 
@@ -143,3 +113,5 @@ spring.jpa.hibernate.ddl-auto=update
 
 #Acessar:
 # localhost:8080/h2-console
+
+
