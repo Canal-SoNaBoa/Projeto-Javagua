@@ -28,8 +28,9 @@ Classe responsável por receber as requisições HTTP e direcioná-las para a ca
 
 ## ✨ Funcionalidades do Controller
 
-- **`cadastrarFornecedor`**  (`POST /fornecedores`)
+- **`cadastrarFornecedor`**  
   Endpoint que recebe os dados de um novo fornecedor e realiza o cadastro no sistema.
+  (`POST /fornecedores`)
 
 ```json
 {
@@ -61,8 +62,9 @@ Classe responsável por receber as requisições HTTP e direcioná-las para a ca
   }
 ]
 
-- **`editarFornecedor`**  (PUT /fornecedores/{id})
+- **`editarFornecedor`**  
   Permite atualizar as informações de um fornecedor existente.
+(PUT /fornecedores/{id})
 
 {
   "nome": "Fornecedor Atualizado",
@@ -74,8 +76,9 @@ Classe responsável por receber as requisições HTTP e direcioná-las para a ca
 
 
 
-- **`deletarFornecedor`**  (DELETE /fornecedores/{id})
+- **`deletarFornecedor`**  
   Remove um fornecedor do sistema com base no ID informado.
+(DELETE /fornecedores/{id})
 DELETE http://localhost:8080/fornecedores/1
 
 
