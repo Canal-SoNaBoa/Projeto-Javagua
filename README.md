@@ -42,7 +42,8 @@ Classe responsável por receber as requisições HTTP e direcioná-las para a ca
 
 
 
-- **`listarFornecedores`**   (GET /fornecedores)
+- **`listarFornecedores`**  
+ (GET /fornecedores)
   Retorna uma lista com todos os fornecedores cadastrados.
   ```json
   [
